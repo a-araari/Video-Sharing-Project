@@ -26,3 +26,15 @@ I don't have enough information about the project, but I created it based on som
     python manage.py runserver
   ```
 then visit [localhost:8000](https://127.0.0.1:8000)
+
+## About this project :
+  Simple ***CRUD***(stands for Create, Retrieve, Update, Delete) project with authentication system (see [django auth](https://docs.djangoproject.com/en/3.0/topics/auth/default/))and search filter.
+  Simply a user should register then login. he will get tutorials posted by other users on the home page, he can view
+  A user can :
+    - Create new Tutorial
+    - Update a Tutorial
+    - Delete a Tutorial
+    - View a Tutorial
+## Oh god, It tooks me 13 hours(in two days) to get this DONE. Fuuuuuuuuck
+
+Thanks at the end!
