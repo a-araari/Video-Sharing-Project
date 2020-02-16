@@ -14,7 +14,7 @@
 	{% if not search_products %}
 		<section class="jumbotron text-center">
 			<div class="container">
-				<h2>Welcome,</h2>
+				<h2>Welcome <span class="text-danger">{{ user.username }}</span>,</h2>
 				{% if user.is_authenticated %}
 					<p>To view all products, click on :</p>		
 					<p>
