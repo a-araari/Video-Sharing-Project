@@ -1,13 +1,15 @@
 # bouba
 No-name project fo Bouba
 
-I don't have enough information about the project, but I created this based on some information you said to me, Bouba.
+![Image of Yaktocat](https://github.com/A-Arari/bouba/blob/master/preview.PNG)
+
+I don't have enough information about the project, but I created it based on some information you gived to me, Bouba.
 
 ## To run this project :
   #### Method 1:
   
-  I upload the project on a free host name {{ name }}
-  You can visit this Website on this address : {{ address: [Youtube](youtube.com) }}
+  I upload the project on a free host named ***Heroku***
+  You can visit this Website on this address : {{ address: [bouba-no-name.com](https://bouba-no-name.herokuapp.com/) }}
   
   #### Method 2:
   
