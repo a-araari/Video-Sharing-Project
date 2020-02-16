@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+	<form method="get" action="." class="form-inline mt-2 mt-md-0 bg-dark rounded" style="padding: 10px;">
+		<input name="q" class="form-control mr-sm-2" style="width:78.5%;" type="text" placeholder="Search" aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0"  style="width:20%;" type="submit">Search</button>
+	</form>
+
+
+
+<main role="main">
+
+	{% if not search_products %}
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h2>Welcome,</h2>
+				{% if user.is_authenticated %}
+					<p>To view all products, click on :</p>		
+					<p>
+						<a href="{% url 'product_list' %}" class="btn btn-primary my-2">PRODUCTS</a>
+						or
+						<a href="{% url 'product_add' %}" class="btn btn-secondary my-2">Add a product</a>
+					</p>
+				{% else %}
+					<p>In order to view, add or create <b>PRODUCTS</b>, You should :</p>	
+
+					<p>
+						<a href="{% url 'login' %}" class="btn btn-primary my-2">Login</a>
+						or
+						<a href="{% url 'register' %}" class="btn btn-secondary my-2">Register</a>
+					</p>
+				{% endif %}
+			</div>
+		</section>
+    {% else %}
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Search Results</h1>
+				<p class="lead text-muted">You are searching for <h3>"<u>{{ search }}</u>"</h3></p>
+			</div>
+		</section>
+    {% endif %}
+
+	<div class="album py-5 bg-light">
+		<div class="container">
+
+			<div class="row">
+				{% if search_products %}
+					{% for product in search_products %}
+
+	    	        	{% include "one_product.html" %}
+
+	            	{% endfor %}
+	            {% else %}
+		            {% for product in products %}
+
+	    	        	{% include "one_product.html" %}
+
+	            	{% endfor %}
+				{% endif %}
+
+			</div>
+		</div>
+	</div>
+</main>
+
+{% endblock content %}

@@ -1,1 +1,48 @@
 {% extends 'base.html' %}
+
+{% block content %}
+
+	{% if form.errors %}
+		<p class="bg-danger text-light rounded" style="text-align: center; padding: 3px 0;"><b>Sorry, information doesn't much, try again!</b></p>
+	{% endif %}
+
+	<form method="POST" action="." class="form-signin">
+		{% csrf_token %}
+		
+		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		
+		<label for="inputText" class="sr-only">Email address</label>
+		<input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" id="inputText" class="form-control adem-input" placeholder="Username" required autofocus >
+		
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" name="password" autocomplete="current-password" id="inputPassword" class="form-control adem-input" placeholder="Password" required>
+		<p style="font-size: 14px;"><a href="{% url 'register' %}">Don't have an accounts? register now!</a></p>
+		<p style="font-size: 14px;"><a href=".">Forogt password!(<b>not working for now</b>)</a></p>
+		<button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+		<p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+
+	</form>
+	<style>
+      .form-signin {
+      	max-width: 400px;
+      	max-height: 600px;
+      	position: absolute;
+      	top: 50%;
+      	left: 50%;
+  		transform: translate(-50%, -50%);
+      }
+      .adem-input {
+      	margin-bottom:10px;
+      }
+	</style>
+{% endblock content %}
+
+<!--
+		<input t>
+		<div class="checkbox mb-3">
+		<label>
+		  <input type="checkbox" value="remember-me"> Remember me
+		</label>
+		</div>
+
+		-->

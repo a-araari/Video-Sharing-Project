@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="get" action="." class="form-inline mt-2 mt-md-0 bg-dark rounded" style="padding: 10px;">
+	<input name="q" class="form-control mr-sm-2" style="width:78.5%;" type="text" placeholder="Search" aria-label="Search">
+	<button class="btn btn-outline-success my-2 my-sm-0"  style="width:20%;" type="submit">Search</button>
+</form>
+
+<main role="main">
+
+	{% if search %}
+		<section class="jumbotron text-center">
+			<div class="container">
+				<h1 class="jumbotron-heading">Search Results</h1>
+				<p class="lead text-muted">You are searching for <h3>"<u>{{ search }}</u>"</h3></p>
+			</div>
+		</section>
+    {% endif %}
+
+	<div class="album py-5 bg-light">
+		<div class="container">
+
+			<div class="row">
+			{% for product in product_list %}
+				{% include "one_product.html" %}
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</main>
+{% endblock content %}

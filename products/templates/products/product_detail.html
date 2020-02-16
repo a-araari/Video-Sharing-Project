@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<h2>{{ product.title }}</h2>
+	<p>{{ product.description }}</p>
+	<div class="video-container">
+		<iframe src="{{ product.tuto_url }}"></iframe>
+	</div>
+
+{% endblock content %}

@@ -1,0 +1,23 @@
+<div class="col-md-4">
+	<div class="card mb-4 box-shadow">
+		<div class="video-container">
+			<iframe src="{{ product.tuto_url }}"></iframe>
+		</div>
+    	<div class="card-body">
+			<h4>{{ product.title }}</h4>
+			<p class="card-text">{{ product.description }}</p>
+			<div class="d-flex justify-content-between align-items-center">
+				<div class="btn-group">
+					<button onclick="location.href='{% url 'product_detail' product.id %}'" type="button" class="btn btn-sm btn-outline-secondary">View</button>
+					{% if product.username == user.username %}
+						<button onclick="location.href='{% url 'product_update' product.id %}'" type="button" class="btn btn-sm btn-outline-secondary btn-success text-light">Edit</button>
+						<br>
+						<button onclick="location.href='{% url 'product_delete' product.id %}'" type="button" class="btn btn-sm btn-outline-secondary btn-danger text-light">delete</button>
+					{% endif %}
+					
+				</div>
+				<small class="text-muted">by <b>{{ product.username }}</b> on {{ product.created_date|date:'H:i' }}</small>
+			</div>
+		</div>
+	</div>
+</div>

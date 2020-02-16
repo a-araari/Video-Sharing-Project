@@ -1,3 +1,25 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .forms import RegisterForm
+# from django.contrib.auth.forms import UserCreationForm
 
-# Create your views here.
+
+def register(request):
+	if request.user.is_authenticated:
+		next_ = request.GET.get('next', '/')
+		return redirect(f'/{next_}/')
+
+	form = RegisterForm()
+
+	if request.method == 'POST':
+		form = RegisterForm(request.POST)
+
+		if form.is_valid():
+			form.save()
+
+			return redirect('login')
+
+	context = {
+		'form': form
+	}
+
+	return render(request, 'registration/register.html', context)
