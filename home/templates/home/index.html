@@ -14,16 +14,16 @@
 	{% if not search_products %}
 		<section class="jumbotron text-center">
 			<div class="container">
-				<h2>Welcome <span class="text-danger">{{ user.username }}</span>,</h2>
+				<h2>Welcome{% if user.is_authenticated %}<span class="text-danger"> {{ user.username }}</span>{% endif %},</h2>
 				{% if user.is_authenticated %}
-					<p>To view all products, click on :</p>		
+					<p>To view all tutorials, click on :</p>		
 					<p>
-						<a href="{% url 'product_list' %}" class="btn btn-primary my-2">PRODUCTS</a>
+						<a href="{% url 'product_list' %}" class="btn btn-primary my-2">TUTORIALS</a>
 						or
-						<a href="{% url 'product_add' %}" class="btn btn-secondary my-2">Add a product</a>
+						<a href="{% url 'product_add' %}" class="btn btn-secondary my-2">Add a Tutorial</a>
 					</p>
 				{% else %}
-					<p>In order to view, add or create <b>PRODUCTS</b>, You should :</p>	
+					<p>In order to view, add or create <b>TUTORIALS</b>, You should :</p>	
 
 					<p>
 						<a href="{% url 'login' %}" class="btn btn-primary my-2">Login</a>

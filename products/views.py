@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.forms.models import model_to_dict
 from django.contrib.auth.decorators import login_required
@@ -10,7 +10,7 @@ from .forms import ProductForm
 
 
 def product_list(request):
-	context = {}
+	context = {'title': 'tutorials'}
 	q = request.GET.get('q', (''))
 	if q != '':
 		search_products = Product.objects.filter(title__contains=q, description__contains=q)
@@ -37,12 +37,12 @@ def add(request):
 			product.username = request.user.username
 			product.save()
 			return redirect('product_list')
-	return render(request, 'products/add.html', {'form': form})
+	return render(request, 'products/add.html', {'form': form, 'title': 'add'})
 
 
 @login_required
 def update(request, pk):
-	product = Product.objects.get(id=pk)
+	product = get_object_or_404(Product, pk=pk)
 	product_dict = model_to_dict(product)
 
 	if product.username == request.user.username:
@@ -63,7 +63,7 @@ def update(request, pk):
 	else:
 		raise Http404
 	
-	return render(request, 'products/add.html', {'form': form})
+	return render(request, 'products/add.html', {'form': form, 'title': 'update'})
 
 
 @login_required

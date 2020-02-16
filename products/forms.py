@@ -7,7 +7,7 @@ class ProductForm(forms.ModelForm):
 		widget=forms.TextInput(attrs={'class':'form-control adem-input'}))
 	description = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control adem-input'}))
 	tuto_url = forms.CharField(max_length=255,
-		widget=forms.TextInput(attrs={'class':'form-control adem-input'}))
+		widget=forms.TextInput(attrs={'class':'form-control adem-input', 'placeholder': 'e.g : https://www.youtube.com/watch?v='}))
 
 	class Meta():
 		model = Product

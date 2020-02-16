@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<h2>{{ product.title }}</h2>
+	<h2>{{ product.title }}
+	{% if product.username == user.username %}
+		<button onclick="location.href='{% url 'product_update' product.id %}'" type="button" class="btn btn-sm btn-outline-secondary btn-success text-light">Edit</button>
+		<button onclick="location.href='{% url 'product_delete' product.id %}'" type="button" class="btn btn-sm btn-outline-secondary btn-danger text-light">delete</button>
+	{% endif %}</h2>
 	<p>{{ product.description }}</p>
 	<div class="video-container">
 		<iframe src="{{ product.tuto_url }}"></iframe>
 	</div>
 
+	<div class="col-lg-12">
+
+        <div class="card mt-4" style="background-color: #222; height: 300px;text-align:center;">
+        	<h1 class="text-light" style="margin: 130px;">An IDE Here</h1>
+        </div>
+	</div>
+	<br>
+	<br>
 {% endblock content %}

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from products.models import Product
 
 def index(request):
-	context = {}
+	context = {'title': 'home'}
 	q = request.GET.get('q', (''))
 	if q != '':
 		search_products = Product.objects.filter(title__icontains=q)

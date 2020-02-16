@@ -5,7 +5,9 @@ from .forms import RegisterForm
 
 def register(request):
 	if request.user.is_authenticated:
-		next_ = request.GET.get('next', '/')
+		next_ = request.GET.get('next', '')
+		if not next_:
+			return redirect('/')
 		return redirect(f'/{next_}/')
 
 	form = RegisterForm()

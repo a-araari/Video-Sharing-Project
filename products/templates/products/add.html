@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
+	<h1 class="border-bottom">Add new Tutorial</h1>
 	<form method="post" action=".">
 		{% csrf_token %}
 		{% for field in form %}
 			<div class="form-group">
-				<label>{{ field.label }}</label>
+				<label>{% if field.label == 'Tuto url' %}
+					Tutorial URL
+					{% else %}
+					{{ field.label }}
+				{% endif %}</label>
 				{{ field }}
 			</div>
 		{% endfor %}

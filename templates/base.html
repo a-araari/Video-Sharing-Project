@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>No-name</title>
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/7/a/7a6mhi3th7.ico" type="image/x-icon" />
+	<title>Bouba{% if title %} | {{ title }}{% endif %}</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<style type="text/css">
 		.adem-margin-top {
@@ -47,10 +48,10 @@
 			
 			{% if user.is_authenticated %}
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'product_add' %}">New product</a>
+					<a class="nav-link" href="{% url 'product_add' %}">New Tutorial</a>
 				</li>
 				<li class="nav-item active">
-					<a class="nav-link" href="{% url 'product_list' %}">Products</a>
+					<a class="nav-link" href="{% url 'product_list' %}">Tutorials</a>
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="{% url 'logout' %}">Logout</a>
