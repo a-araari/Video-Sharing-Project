@@ -35,6 +35,11 @@ then visit [localhost:8000](https://127.0.0.1:8000)
     - Update a Tutorial
     - Delete a Tutorial
     - View a Tutorial
+    
+ notes :
+  username and password are case-sensitive
+  tutorial url must be a Youtube video and typed like this ('https://www.youtube.com/watch?v=5xInN-fZNnE' OR only the ID 'v=5xInN-fZNnE)
+  you can't reset password(because i'm tired now and it takes about 15 minutes with django to get is done)
 ## Oh god, It tooks me 13 hours(in two days) to get this DONE. Fuuuuuuuuck
 
 Thanks at the end!
