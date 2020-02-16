@@ -1,7 +1,7 @@
 # bouba
-No-name project fo Bouba
+***No-name*** project for Bouba
 
-![Image of Yaktocat](https://github.com/A-Arari/bouba/blob/master/preview.PNG)
+![ScreenShot](https://github.com/A-Arari/bouba/blob/master/preview.PNG)
 
 I don't have enough information about the project, but I created it based on some information you gived to me, Bouba.
 
@@ -17,6 +17,7 @@ I don't have enough information about the project, but I created it based on som
   ```diff
   - make sure to add python to System **PATH** 
   ```
+  clone this repository
   open **CMD** and Type:
   
   ```diff
@@ -24,3 +25,4 @@ I don't have enough information about the project, but I created it based on som
     cd "{ project path, where there is the manage.py file e.g : cd no-name}"
     python manage.py runserver
   ```
+then visit [localhost:8000](https://127.0.0.1:8000)
