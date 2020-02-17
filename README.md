@@ -15,7 +15,7 @@ I don't have enough information about the project, but I created it based on som
   
   Download [Python 3.7](https://www.python.org/downloads/)
   ```diff
-  - make sure to add python to System **PATH** (see [Add Python to the Windows Path](https://geek-university.com/python/add-python-to-the-windows-path/)) 
+  - make sure to add python to System **PATH** (see (https://geek-university.com/python/add-python-to-the-windows-path/)) 
   ```
   clone this repository using Git or just download it and extract it
   
