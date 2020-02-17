@@ -9,15 +9,16 @@ I don't have enough information about the project, but I created it based on som
   #### Method 1:
   
   I deployed the project on a free host named ***Heroku***
-  You can visit this Website on this address : ***[bouba-no-name.com](https://bouba-no-name.herokuapp.com/)***
+  You can visit this Website at this address : ***[bouba-no-name.com](https://bouba-no-name.herokuapp.com/)***
   
   #### Method 2:
   
   Download [Python 3.7](https://www.python.org/downloads/)
   ```diff
-  - make sure to add python to System **PATH** 
+  - make sure to add python to System **PATH** (see [Add Python to the Windows Path](https://geek-university.com/python/add-python-to-the-windows-path/)) 
   ```
-  clone this repository
+  clone this repository using Git or just download it and extract it
+  
   open **CMD** and Type:
   
   ```diff
@@ -29,7 +30,7 @@ then visit [localhost:8000](https://127.0.0.1:8000)
 
 ## About this project :
   Simple ***CRUD***(stands for Create, Retrieve, Update, Delete) project with authentication system (see [django auth](https://docs.djangoproject.com/en/3.0/topics/auth/default/))and search filter.
-  Simply a user should register then login. he will get tutorials posted by other users on the home page, he can view
+  Simply, a user should register then login. he will views tutorials posted by other users at the home page.
   A user can :
     - Create new Tutorial
     - Update a Tutorial
