@@ -9,7 +9,7 @@ I don't have enough information about the project, but I created it based on som
   #### Method 1:
   
   I deployed the project on a free host named ***Heroku***
-  You can visit this Website on this address : ###[bouba-no-name.com](https://bouba-no-name.herokuapp.com/)
+  You can visit this Website on this address : ***[bouba-no-name.com](https://bouba-no-name.herokuapp.com/)***
   
   #### Method 2:
   
