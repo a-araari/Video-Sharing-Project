@@ -8,8 +8,8 @@ I don't have enough information about the project, but I created it based on som
 ## To run this project :
   #### Method 1:
   
-  I upload the project on a free host named ***Heroku***
-  You can visit this Website on this address : {{ address: [bouba-no-name.com](https://bouba-no-name.herokuapp.com/) }}
+  I deployed the project on a free host named ***Heroku***
+  You can visit this Website on this address : ###[bouba-no-name.com](https://bouba-no-name.herokuapp.com/)
   
   #### Method 2:
   
